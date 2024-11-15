@@ -19,9 +19,8 @@ Start
 <html>
 <body>
 
-<p>Click on the button to copy</p>
 
-<input type="text" value="Hello World" id="myInput">
+<input type="text" value="Hello  gjgjh ghjhgj World" id="myInput">
 <button onclick="myFunction()">Copy text</button>
 
 <p>The document.execCommand() method is not supported in IE8 and earlier.</p>
