@@ -37,8 +37,50 @@ chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 ```
 
-```
+```ruby
 docker pull elixirprotocol/validator:v3
+```
 
+```ruby
+git clone https://github.com/fmsuicmc/elixir-metadata
+```
+
+```ruby
+cd elixir-metadata
+
+nano validator.env
+```
+STRATEGY_EXECUTOR_IP_ADDRESS : The public IP address
+
+STRATEGY_EXECUTOR_DISPLAY_NAME : This is the public-facing name for you or your organization. This will be visible on Elixir Network dashboards and your uptime and performance metrics will be tied to this name.
+
+STRATEGY_EXECUTOR_BENEFICIARY: Set this to the wallet address you want to receive your Elixir Network validator rewards (when available). This can be any wallet address — EOA, Hardware wallet, Multisig, etc..
+
+SIGNER_PRIVATE_KEY : The private key that was generated in the Preparations steps above. This should be a new, never-used wallet and will never need funds.
+
+Note: This field does not start with 0x
+
+save nano :
+
+Control X
+
+y
+
+Enter
+
+start validator
+```ruby
+docker run -it \
+  --env-file $Home/root/elixir-metadata/validator.env \
+  --name elixir \
+  elixirprotocol/validator:v3
+```
+logs is ok
+
+close server
+
+everything was good If you want to see the log
+```ruby
+docker logs --follow elixir 
 ```
 
