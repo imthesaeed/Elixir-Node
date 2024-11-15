@@ -14,7 +14,7 @@ Start
 4- Stake Your MOCK Tokens
 
 5- Start server
-```
+```ruby
 sudo apt update && sudo apt upgrade -y
 sudo apt install jq -y
 
@@ -35,4 +35,5 @@ curl -L "https://github.com/docker/compose/releases/download/"$VER"/docker-compo
 chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 ```
+
 
